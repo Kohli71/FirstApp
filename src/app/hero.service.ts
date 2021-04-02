@@ -15,7 +15,7 @@ export class HeroService {
   private heroesUrl = 'api/heroes'; // URL to web api
 
   httpOptions = {
-    headers: new HttpHeaders({ 'contentType': 'application/json' })
+    headers: new HttpHeaders({ 'contentType': 'application/json' }) // Just like response.setContentType("application/json") in Servlets
   };
 
   constructor(
@@ -97,11 +97,11 @@ export class HeroService {
     );
   }
 
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
+  /*
+    Handle Http operation that failed.
+    Let the app continue.
+    @param operation - name of the operation that failed
+    @param result - optional value to return as the observable result
    */
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

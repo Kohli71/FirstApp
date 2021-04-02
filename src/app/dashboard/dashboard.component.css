@@ -35,7 +35,7 @@
     max-height: 120px;
     min-width: 120px;
     background-color: #3f525c;
-    border-radius: 2px;
+    border-radius: 25px;
   }
   .module:hover {
     background-color: #EEE;

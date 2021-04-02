@@ -7,10 +7,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'heroes', component: HeroesComponent}
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'}, // If there is no path selected it'll redirect to "/dashboard"
+  { path: 'dashboard', component: DashboardComponent }, // DashboardComponent is executed when directed to "/dashboard"
+  { path: 'detail/:id', component: HeroDetailComponent }, // HeroDetailComponent is executed when directed to "/detail/:id"
+  { path: 'heroes', component: HeroesComponent} // HeroesComponent is executed when directed to "/heroes"
 ];
 
 @NgModule({
