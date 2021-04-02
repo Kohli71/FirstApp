@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
-import { Observable } from 'rxjs';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Hero } from './hero';
 
 @Injectable({
@@ -8,46 +7,26 @@ import { Hero } from './hero';
 })
 export class InMemoryDataService implements InMemoryDbService {
 
-  
-  constructor() { }
-  createDb(reqInfo?: RequestInfo): {} | Observable<{}> | Promise<{}> {
-    throw new Error('Method not implemented.');
-  }
-}
-
-
-/*
-import { Injectable } from '@angular/core';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Hero } from './hero';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 1, name: 'Kohli' },
+      { id: 2, name: 'Dhoni' },
+      { id: 3, name: 'Gill' },
+      { id: 4, name: 'Pant' },
+      { id: 5, name: 'Kranthi' },
+      { id: 6, name: 'Rohit' },
+      { id: 7, name: 'Ishan' },
+      { id: 8, name: 'Jadeja'}
     ];
     return {heroes};
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
   // If the heroes array is empty,
-  // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
+  // the method below returns the initial number (1).
+  // If the heroes array is not empty, the method below returns the highest hero id+1.
+  
   genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 1;
   }
 }
-*/
